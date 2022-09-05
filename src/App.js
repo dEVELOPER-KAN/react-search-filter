@@ -1,6 +1,7 @@
 import Card from './Card'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import atatus from 'atatus-nodejs/start'
 
 
 
@@ -15,6 +16,12 @@ function App() {
         setResponse(data.map(el => el))
       })
 
+atatus.startMonitor({
+    licenseKey: "lic_apm_bcc28f9e4d3c43c0a695ae69ddf93955",
+    appName: "stack11",
+    analytics: true,
+    captureBody: 'all'
+  });
   }, []);
 
   useEffect(() => {
