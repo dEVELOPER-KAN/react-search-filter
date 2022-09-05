@@ -25,13 +25,9 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
   <title>React App</title>
-  <script>
-    (function(_,e,rr,s){_errs=[s];var c=_.onerror;_.onerror=function(){var a=arguments;_errs.push(a);
-    c&&c.apply(this,a)};var b=function(){var c=e.createElement(rr),b=e.getElementsByTagName(rr)[0];
-    c.src="//beacon.errorception.com/"+s+".js";c.async=!0;b.parentNode.insertBefore(c,b)};
-    _.addEventListener?_.addEventListener("load",b,!1):_.attachEvent("onload",b)})
-    (window,document,"script","62d11aff4b58d103de641242");
-</script>
+ <script src="https://dmc1acwvwny3.cloudfront.net/atatus.js"></script>
+
+    <script type="text/javascript">atatus.config('a69eee16190c4cc28474429ea86c6705').install();</script>
 
 </head>
 
@@ -49,5 +45,8 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
 </body>
+  <script>
+    atatus.notify(new Error('Test Atatus Setup'));
+  </script>
 
 </html>
